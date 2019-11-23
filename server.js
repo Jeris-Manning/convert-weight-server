@@ -1,10 +1,12 @@
 const express = require('express');
+const CORS = require('cors');
 
 const Ingredients = require('./data/conversions-db-queries');
 
 const server = express();
 
 server.use(express.json());
+server.use(CORS());
 
 server.get('/api/conversions', async (req, res) => {
   try {
