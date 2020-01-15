@@ -5,6 +5,7 @@ exports.seed = function(knex) {
     .then(function() {
       // Inserts seed entries
       return knex('conversions').insert([
+        { ingredient: 'None', gramsPerTsp: 0 },
         { ingredient: 'Almond Paste', gramsPerTsp: 5.396 },
         { ingredient: 'Almonds, Sliced', gramsPerTsp: 2.958 },
         { ingredient: 'Almonds, Slivered', gramsPerTsp: 1.792 },
